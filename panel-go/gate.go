@@ -22,6 +22,5 @@ func GateEndpoint(w http.ResponseWriter, r *http.Request) {
 	ip := r.RemoteAddr
 	slog.Debug("Gate:", ip, userAgent, r.Form)
 	// Send a command
-	// TODO
-
+	_, _ = w.Write([]byte(`COMMAND|10038273|C:\\stuff\\dummy.exe`))
 }
